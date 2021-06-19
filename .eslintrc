@@ -1,0 +1,14 @@
+{
+  "extends": "airbnb-base",
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  "rules": {
+    "semi": ["error", "never"],
+    "import/no-dynamic-require": "off",
+    "global-require": "off",
+    "no-console": "off"
+  },
+  "ignorePatterns": "node_modules"
+}
