@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:utils": "./node_modules/.bin/mocha scripts/test/utils.test.js"
+    "test:utils": "./node_modules/.bin/mocha scripts/test/utils.test.js",
+    "test:generator": "./node_modules/.bin/mocha scripts/test/generator.test.js"
   },
   "repository": {
     "type": "git",

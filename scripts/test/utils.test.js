@@ -2,14 +2,13 @@
  * @Author: tangzhicheng
  * @Date: 2021-06-20 11:27:31
  * @LastEditors: tangzhicheng
- * @LastEditTime: 2021-06-20 13:45:02
+ * @LastEditTime: 2021-06-20 23:22:16
  * @Description: 测试工具方法
  */
 
-const fs = require('fs')
 const { describe, it } = require('mocha')
 const path = require('path')
-const { checkExit, createDir } = require('../../lib/utils/index')
+const { checkExit, createDir, rmdir } = require('../../lib/utils/fileActions')
 
 describe('check utils function', () => {
   it('check checkExit function', (done) => {
@@ -27,9 +26,9 @@ describe('check utils function', () => {
     const dirName = `testDir${dirCode}`
     const dirPath = path.join(process.cwd(), dirName)
     createDir(dirName)
-      .then(() => done())
       .then(() => checkExit(dirPath))
-      .then(() => fs.rmdirSync(dirPath))
+      .then(() => rmdir(dirPath))
+      .then(() => done())
       .catch((err) => done(err))
   })
 })
