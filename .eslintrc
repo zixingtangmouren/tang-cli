@@ -8,7 +8,11 @@
     "semi": ["error", "never"],
     "import/no-dynamic-require": "off",
     "global-require": "off",
-    "no-console": "off"
+    "no-console": "off",
+    "no-param-reassign": "off",
+    "default-case": "off",
+    "radix": "off",
+    "max-len": "off"
   },
   "ignorePatterns": "node_modules"
 }
