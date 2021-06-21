@@ -13,7 +13,8 @@
     "default-case": "off",
     "radix": "off",
     "max-len": "off",
-    "linebreak-style": "off"
+    "linebreak-style": "off",
+    "no-return-await": "off"
   },
   "ignorePatterns": "node_modules"
 }
