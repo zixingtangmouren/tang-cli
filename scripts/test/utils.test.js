@@ -2,7 +2,7 @@
  * @Author: tangzhicheng
  * @Date: 2021-06-20 11:27:31
  * @LastEditors: tangzhicheng
- * @LastEditTime: 2021-06-21 17:12:34
+ * @LastEditTime: 2021-06-22 19:07:34
  * @Description: 测试工具方法
  */
 
@@ -11,6 +11,8 @@ const path = require('path')
 const {
   checkExit, createDir, rmdir, copyDir,
 } = require('../../lib/utils/fileActions')
+
+const { checkNodeVersion } = require('../../lib/utils')
 
 describe('check utils function', () => {
   it('check checkExit function', (done) => {
@@ -32,9 +34,15 @@ describe('check utils function', () => {
     await rmdir(dirPath)
   })
 
-  it('check copyDir', async () => {
-    const source = path.join(process.cwd(), 'scripts')
-    const target = path.join(process.cwd(), 'copy')
-    await copyDir(source, target)
+  // it('check copyDir', async () => {
+  //   const source = path.join(process.cwd(), 'scripts')
+  //   const target = path.join(process.cwd(), 'copy')
+  //   await copyDir(source, target)
+  // })
+
+  it('check checkNodeVersion', () => {
+    if (!checkNodeVersion('14.4.1')) {
+      throw new Error('checkNodeVersion error')
+    }
   })
 })
