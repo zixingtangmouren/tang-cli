@@ -2,24 +2,25 @@
  * @Author: tangzhicheng
  * @Date: 2021-06-20 22:54:22
  * @LastEditors: tangzhicheng
- * @LastEditTime: 2021-06-22 10:28:56
+ * @LastEditTime: 2021-06-22 15:10:26
  * @Description: file content
  */
 
 const { describe, it } = require('mocha')
 const path = require('path')
 const assert = require('assert').strict
-const { checkExit, rm } = require('../../lib/utils/fileActions')
+const { checkExit } = require('../../lib/utils/fileActions')
 const Generator = require('../../lib/Generator')
 
 describe('check generator', () => {
+  process.chdir(path.join(__dirname, '../demo'))
+
   it('check babel', async () => {
     const babelGenerator = require('../../lib/generator/babel')
     const generator = new Generator('app', { framework: 'react' })
     await babelGenerator(generator)
     const isExit = await checkExit(path.join(process.cwd(), 'babel.config.json'))
     if (!isExit) throw new Error()
-    await rm(path.join(process.cwd(), 'babel.config.json'))
   })
 
   it('check src', async () => {
@@ -59,5 +60,13 @@ describe('check generator', () => {
         '@babel/preset-react': '^7.13.13',
       },
     })
+  })
+
+  it('check eslint', async () => {
+    const eslintGenerator = require('../../lib/generator/eslint')
+    const generator = new Generator('app', { framework: 'react' })
+    await eslintGenerator(generator)
+    const isExit = await checkExit(path.join(process.cwd(), '.eslintrc'))
+    if (!isExit) throw new Error()
   })
 })
