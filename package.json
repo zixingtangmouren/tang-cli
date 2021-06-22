@@ -1,6 +1,6 @@
 {
   "name": "tangmr-cli",
-  "version": "1.1.0",
+  "version": "2.0.1",
   "description": "这是一个功能全面的前端脚手架",
   "main": "index.js",
   "scripts": {
