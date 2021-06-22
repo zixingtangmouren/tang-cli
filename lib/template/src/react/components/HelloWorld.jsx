@@ -1,5 +1,5 @@
 import React from 'react'
 
-const HelloWorld = (props) => {
-  return <div>{props.msg}</div>
-}
+const HelloWorld = (props) => <div>{props.msg}</div>
+
+export default HelloWorld

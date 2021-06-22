@@ -4,6 +4,7 @@ import HelloWorld from './components/HelloWorld'
 
 class App extends React.Component {
   constructor() {
+    super()
     this.state = {
       msg: 'hello world',
     }
