@@ -1,4 +1,10 @@
-
+<!--
+ * @Author: tangzhicheng
+ * @Date: 2021-06-21 08:52:11
+ * @LastEditors: tangzhicheng
+ * @LastEditTime: 2021-06-22 19:12:27
+ * @Description: file content
+-->
 
 # tang-cli
 
@@ -17,4 +23,3 @@ npm install tangmr-cli -g
 ```hash
 tang create demo-app
 ```
-

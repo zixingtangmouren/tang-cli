@@ -2,7 +2,7 @@
  * @Author: tangzhicheng
  * @Date: 2021-06-20 11:27:31
  * @LastEditors: tangzhicheng
- * @LastEditTime: 2021-06-22 19:07:34
+ * @LastEditTime: 2021-06-22 19:11:11
  * @Description: 测试工具方法
  */
 
@@ -34,11 +34,11 @@ describe('check utils function', () => {
     await rmdir(dirPath)
   })
 
-  // it('check copyDir', async () => {
-  //   const source = path.join(process.cwd(), 'scripts')
-  //   const target = path.join(process.cwd(), 'copy')
-  //   await copyDir(source, target)
-  // })
+  it('check copyDir', async () => {
+    const source = path.join(process.cwd(), 'scripts')
+    const target = path.join(process.cwd(), 'copy')
+    await copyDir(source, target)
+  })
 
   it('check checkNodeVersion', () => {
     if (!checkNodeVersion('14.4.1')) {
