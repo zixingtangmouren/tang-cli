@@ -2,7 +2,7 @@
  * @Author: tangzhicheng
  * @Date: 2021-06-20 22:54:22
  * @LastEditors: tangzhicheng
- * @LastEditTime: 2021-06-22 15:23:29
+ * @LastEditTime: 2021-06-23 22:09:53
  * @Description: file content
  */
 
@@ -78,5 +78,9 @@ describe('check generator', () => {
     await generator.outputPackage()
     const isExit = await checkExit(path.join(process.cwd(), 'package.json'))
     if (!isExit) throw new Error()
+  })
+
+  it('check Css Pre', async () => {
+    //
   })
 })
