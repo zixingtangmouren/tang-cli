@@ -1,14 +1,11 @@
 /**
  * @Author: tangzhicheng
- * @Date: 2021-06-22 22:35:23
+ * @Date: 2021-06-23 22:20:48
  * @LastEditors: tangzhicheng
- * @LastEditTime: 2021-06-22 23:02:10
+ * @LastEditTime: 2021-06-23 22:58:18
  * @Description: file content
  */
-const execa = require('execa');
 
-(async () => {
-  const { stdout } = await execa('yarn', ['-v'])
-  console.log(stdout)
-  //= > 'unicorns'
-})()
+const eslintjson = require('../../lib/template/.eslintrc.json')
+
+console.log(eslintjson instanceof Object)

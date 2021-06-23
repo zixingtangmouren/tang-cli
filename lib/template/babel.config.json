@@ -12,9 +12,6 @@
         "useBuiltIns": "usage",
         "corejs": "3.12.1"
       }
-    ],
-    <% presets.forEach(function(preset){ %>
-    "<%= preset %>",
-    <% }); %>
+    ]
   ]
 }
