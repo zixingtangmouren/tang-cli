@@ -3,7 +3,7 @@ const program = require('commander')
 const create = require('../lib/create')
 
 program
-  .version('2.1.0')
+  .version('2.1.1')
   .command('create <name>')
   .description('create a new project')
   .action((name) => {
