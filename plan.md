@@ -2,7 +2,7 @@
  * @Author: tangzhicheng
  * @Date: 2021-06-23 16:11:09
  * @LastEditors: tangzhicheng
- * @LastEditTime: 2021-06-23 16:16:29
+ * @LastEditTime: 2021-06-24 15:53:23
  * @Description: file content
 -->
 
@@ -23,3 +23,4 @@
 3. 支持 npm,yarn 的检测功能
 4. 支持自动下载依赖功能
 5. 优化原有的工具类
+6. 集成`Jest`相关测试框架

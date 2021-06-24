@@ -2,13 +2,15 @@
  * @Author: tangzhicheng
  * @Date: 2021-06-21 08:52:11
  * @LastEditors: tangzhicheng
- * @LastEditTime: 2021-06-24 15:39:01
+ * @LastEditTime: 2021-06-24 15:54:34
  * @Description: file content
 -->
 
 # tang-cli
 
-一个功能齐全的脚手架。支持`Vue, React，Angular`框架的项目模板构建。还可以选择移动端和 pc 端模板。
+Version： 2.2.0
+
+一个功能齐全的脚手架。支持`Vue, React，Angular`框架的项目模板构建，还可以根据框架选择移动端和 pc 端模板。
 
 目前只支持`React`的项目模板，当前集成了`babel, eslint, webpack, CssProcessors, Store`。更多`feature`敬请期待。
 
