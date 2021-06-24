@@ -2,7 +2,7 @@
  * @Author: tangzhicheng
  * @Date: 2021-06-20 22:54:22
  * @LastEditors: tangzhicheng
- * @LastEditTime: 2021-06-23 22:09:53
+ * @LastEditTime: 2021-06-24 15:13:04
  * @Description: file content
  */
 
@@ -18,7 +18,7 @@ describe('check generator', () => {
   let generator
 
   beforeEach(() => {
-    generator = new Generator('app', { framework: 'react' })
+    generator = new Generator('app', { framework: 'react', features: ['store'] })
   })
 
   it('check Generator extendPackage function', () => {
@@ -62,9 +62,12 @@ describe('check generator', () => {
     if (!isExit) throw new Error()
   })
 
+  /**
+   * src这个目录的输出模块，后期要单独抽离出来一个测试文件
+   */
   it('check src', async () => {
     const srcGenerator = require('../../lib/generator/src')
-    await srcGenerator({ Selected: { framework: 'react' }, package: { name: 'app-demo' } })
+    await srcGenerator(generator)
   })
 
   it('check eslint', async () => {
@@ -78,9 +81,5 @@ describe('check generator', () => {
     await generator.outputPackage()
     const isExit = await checkExit(path.join(process.cwd(), 'package.json'))
     if (!isExit) throw new Error()
-  })
-
-  it('check Css Pre', async () => {
-    //
   })
 })
