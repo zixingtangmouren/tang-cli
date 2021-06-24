@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test:utils": "./node_modules/.bin/mocha scripts/test/utils.test.js",
-    "test:generator": "./node_modules/.bin/mocha scripts/test/generator.test.js"
+    "test:generator": "./node_modules/.bin/mocha scripts/test/generator.test.js",
+    "test:ejs": "./node_modules/.bin/mocha scripts/test/ejs.test.js"
   },
   "repository": {
     "type": "git",
